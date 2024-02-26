@@ -13,20 +13,20 @@
     <div class="offset-md-3 col-md-9">
       <div class="form-check form-check-inline">
         <%= form.check_box :child, id: 'plus_one_child', class: 'form-check-input' %>
-        <%= form.label :child, 'Child (12 or under)', class: 'form-check-label' %>
+        <%= form.label :child, 'Criança (Menor de 12 anos)', class: 'form-check-label' %>
       </div>
     </div>
   </div>
 
   <div class="row guests-buttons">
     <div class="col-md-3">
-      <span class="wedding-required">* Required</span>
+      <span class="wedding-required">* Obrigatório</span>
     </div>
     <div class="col-md-6 text-center">
-      <%= form.submit submit_action, class: 'btn btn-primary', data: { disable_with: 'Sending...' } %>
+      <%= form.submit submit_action, class: 'btn btn-primary', data: { disable_with: 'Enviando...' } %>
     </div>
     <div class="col-md-3 text-right">
-      <%= link_to 'Cancel', guest_plus_ones_path(@guest), class: 'btn btn-secondary' %>
+      <%= link_to 'Cancelar', guest_plus_ones_path(@guest), class: 'btn btn-secondary' %>
     </div>
   </div>
 <% end %>

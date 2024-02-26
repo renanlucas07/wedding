@@ -30,8 +30,8 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  wedding_name: "Jack & Jill's Wedding"
-  wedding_couple_names: 'Jack & Jill'
+  wedding_name: "Casamento Luiza & Renan"
+  wedding_couple_names: 'Luiza & Renan'
   wedding_date: 'Saturday, 1 January 2000'
   wedding_location: 'South Pole'
-  photo_credits: 'Photo Credits: Pexels'
+  photo_credits: ''

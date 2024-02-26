@@ -1,20 +1,20 @@
 <nav class="guests-rsvp-nav">
   <ul class="nav nav-pills nav-fill">
     <li class="nav-item">
-      <%= link_to '1. About You', guest_path(@guest), class: ['nav-link', active == 1 ? 'active' : ''] %>
+      <%= link_to '1. Sobre Você', guest_path(@guest), class: ['nav-link', active == 1 ? 'active' : ''] %>
     </li>
     <li class="nav-item">
       <% if active >= 2 %>
-        <%= link_to '2. Plus Ones', guest_plus_ones_path(@guest), class: ['nav-link', active == 2 ? 'active' : ''] %>
+        <%= link_to '2. Acompanhantes', guest_plus_ones_path(@guest), class: ['nav-link', active == 2 ? 'active' : ''] %>
       <% else %>
-        <a class="nav-link <%= active == 2 ? 'active' : '' %>">2. Plus Ones</a>
+        <a class="nav-link <%= active == 2 ? 'active' : '' %>">2. Acompanhantes</a>
       <% end %>
     </li>
     <li class="nav-item">
       <% if active >= 3 %>
-        <%= link_to '3. Confirm', confirm_guest_path(@guest), class: ['nav-link', active == 3 ? 'active' : ''] %>
+        <%= link_to '3. Confirmação', confirm_guest_path(@guest), class: ['nav-link', active == 3 ? 'active' : ''] %>
       <% else %>
-        <a class="nav-link <%= active == 3 ? 'active' : '' %>">3. Confirm</a>
+        <a class="nav-link <%= active == 3 ? 'active' : '' %>">3. Confirmação</a>
       <% end %>
     </li>
   </ul>

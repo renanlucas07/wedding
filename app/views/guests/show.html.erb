@@ -4,7 +4,7 @@
       <%= render partial: 'leader' %>
       <%= render partial: 'rsvp_nav', locals: { active: 1 } %>
 
-      <h2>About You</h2>
+      <h2>Sobre Você</h2>
 
       <%= form_with(model: @guest, method: :patch, local: true, id: 'guest-edit-form') do |form| %>
       <div class="row">
@@ -27,14 +27,14 @@
 
       <div class="form-group row">
         <div class="offset-md-3 col-md-9">
-          <p><strong>Will you be joining us?</strong></p>
+          <p><strong>Você virá?</strong></p>
           <div class="form-check form-check-inline">
             <%= form.radio_button :attending, 'true', checked: true, id: 'guest_attending_true', class: 'form-check-input' %>
-            <%= form.label :attending, 'Yes', value: 'true', class: 'form-check-label' %>
+            <%= form.label :attending, 'Sim', value: 'true', class: 'form-check-label' %>
           </div>
           <div class="form-check form-check-inline">
             <%= form.radio_button :attending, 'false', id: 'guest_attending_false', class: 'form-check-input' %>
-            <%= form.label :attending, 'No', value: 'false', class: 'form-check-label' %>
+            <%= form.label :attending, 'Não', value: 'false', class: 'form-check-label' %>
           </div>
         </div>
       </div>
@@ -44,21 +44,21 @@
 
       <div class="form-group row">
         <div class="col-md-3">
-          <%= form.label :songs, 'Song Suggestions', class: 'col-form-label' %>
+          <%= form.label :songs, 'Sugestões de Músicas', class: 'col-form-label' %>
         </div>
         <div class="col-md-9">
           <%= form.text_area :songs, id: 'guest_songs', class: 'form-control' %>
-          <small class="form-text text-muted">We're crowd sourcing our playlist! Choose some songs you'd like to hear.</small>
+          <small class="form-text text-muted">Estamos montando nossa playlist! Escolha algumas músicas que gostaria de ouvir.</small>
         </div>
       </div>
       </div>
 
       <div class="row guests-buttons">
         <div class="col-md-3">
-          <span class="wedding-required">* Required</span>
+          <span class="wedding-required">* Obrigatório</span>
         </div>
         <div class="col-md-6 text-center">
-          <%= form.submit 'Continue', class: 'btn btn-primary', data: { disable_with: 'Sending...' } %>
+          <%= form.submit 'Continuar', class: 'btn btn-primary', data: { disable_with: 'Enviando...' } %>
         </div>
       </div>
       <% end %>

@@ -3,28 +3,28 @@
   <div class="card-body">
     <div class="row">
       <div class="col-md-4">
-        Dietary Preferences
+        Preferências de Dieta
       </div>
       <div class="col-md-8">
         <% if plus_one.diet.present? %>
           <pre><%= plus_one.diet %></pre>
         <% else %>
-          <p>(None)</p>
+          <p>(Nenhuma)</p>
         <% end %>
       </div>
     </div>
     <div class="row">
       <div class="col-md-4">
-        Child
+        Criança
       </div>
       <div class="col-md-8">
-        <p><%= plus_one.child ? 'Yes' : 'No' %></p>
+        <p><%= plus_one.child ? 'Sim' : 'Não' %></p>
       </div>
     </div>
     <div class="row">
       <div class="col-md-12 text-right">
-        <%= link_to 'Edit', edit_guest_plus_one_path(plus_one.guest, plus_one), class: 'card-link', data: { disable_with: 'Loading...' } %>
-        <%= link_to 'Remove', guest_plus_one_path(plus_one.guest, plus_one), method: :delete, class: 'card-link', data: { disable_with: 'Removing...', confirm: 'Are you sure?' } %>
+        <%= link_to 'Editar', edit_guest_plus_one_path(plus_one.guest, plus_one), class: 'card-link', data: { disable_with: 'Carregando...' } %>
+        <%= link_to 'Remover', guest_plus_one_path(plus_one.guest, plus_one), method: :delete, class: 'card-link', data: { disable_with: 'Removendo...', confirm: 'Tem certeza?' } %>
       </div>
     </div>
   </div>

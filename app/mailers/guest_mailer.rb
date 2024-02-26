@@ -7,7 +7,7 @@ class GuestMailer < ApplicationMailer
     @guest = guest
     mail(
       to: guest.name_with_email,
-      subject: "#{I18n.t(:wedding_name)}: RSVP Confirmation"
+      subject: "#{I18n.t(:wedding_name)}: Confirmação de Presença"
     )
   end
 
@@ -15,7 +15,7 @@ class GuestMailer < ApplicationMailer
     @guest = guest
     mail(
       to: guest.name_with_email,
-      subject: "#{I18n.t(:wedding_name)}: Your RSVP"
+      subject: "#{I18n.t(:wedding_name)}: Sua Confirmação de Presença"
     )
   end
 end

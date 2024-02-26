@@ -82,6 +82,7 @@ test:
 #
 production:
   <<: *default
-  database: wedding_production
-  username: wedding
+  host: ec2-44-213-151-75.compute-1.amazonaws.com
+  database: d88u1r33dqrk1n
+  username: skvbokfbyjyqcr
   password: <%= ENV['WEDDING_DATABASE_PASSWORD'] %>

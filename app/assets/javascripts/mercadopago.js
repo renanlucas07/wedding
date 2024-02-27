@@ -1,4 +1,3 @@
-console.log('<%= ENV %>')
 const mp = new MercadoPago("APP_USR-03e670f5-ff40-40e9-9aac-1cb808812ac1");
 
 (async function getIdentificationTypes() {

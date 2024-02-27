@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
 
   get 'welcome/index'
-
+  post :process_payment, to: 'welcome#process_payment', as: :process_payment
   resources :guests do
     resources :plus_ones
     member do

@@ -1,18 +1,74 @@
 <section id="welcome-index-venue-leader" class="jumbotron text-center">
   <div class="container">
-    <h1>The Venue</h1>
+    <h1>Presentes</h1>
   </div>
 </section>
 <section id="welcome-index-venue">
   <div class="container">
     <div class="row">
-      <div class="offset-md-3 col-md-6">
-        <h2>How do I get there?</h2>
-        <p>Ships sail regularly from Ushuaia, Argentina. Allow two days.</p>
-        <p>There is ample snow mobile parking. Watch out for penguins.</p>
-        <h2>Coming from out of town?</h2>
-        <p>The station has a number of rooms that you can get at the <strong>discounted wedding rate</strong>.</p>
-        <p>Check in is from 3pm, so you may not be able to get ready in your room if you book it just for the night of the wedding.</p>
+      <div class="offset-lg-2 col-lg-8">
+        <%= form_with url: process_payment_path, method: :post, id: 'form-checkout' do |f| %>
+          <div class="form-group row">
+            <div class="col-md-3">
+              <%= f.label :payment_first_name, 'Nome', class: 'col-form-label' %>
+            </div>
+            <div class="col-md-9">
+              <%= f.text_field :payment_first_name, id: "form-checkout__payerFirstName", class: 'form-control' %>
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="col-md-3">
+              <%= f.label :payment_last_name, 'Sobrenome', class: 'col-form-label' %>
+            </div>
+            <div class="col-md-9">
+              <%= f.text_field :payment_last_name, id: "form-checkout__payerLastName", class: 'form-control' %>
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="col-md-3">
+              <%= f.label :email, 'Email', class: 'col-form-label' %>
+              <span class="wedding-required">*</span>
+            </div>
+            <div class="col-md-9">
+              <%= f.email_field :email, id: "form-checkout__email", class: 'form-control' %>
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="col-md-3">
+              <%= f.label :identification_type, 'Documento', class: 'col-form-label' %>
+              <span class="wedding-required">*</span>
+            </div>
+            <div class="col-md-2">
+              <%= f.select :identification_type, [], {}, {class: 'form-control', id: 'form-checkout__identificationType'} %>
+            </div>
+            <div class="col-md-7">
+              <%= f.text_field :identification_number, id: "form-checkout__identificationNumber", class: 'form-control' %>
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="col-md-3">
+              <%= f.label :amount, 'Valor', class: 'col-form-label' %>
+              <span class="wedding-required">*</span>
+            </div>
+            <div class="col-md-9">
+              <%= f.text_field :amount, id: "form-checkout__amount", class: 'form-control' %>
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="col-md-3">
+              <%= f.label :description, 'Escreva uma mensagem para nós', class: 'col-form-label' %>
+            </div>
+            <div class="col-md-9">
+              <%= f.text_area :description, id: "form-checkout__description", class: 'form-control' %>
+            </div>
+          </div>
+          <br/>
+          <div class="form-group row">
+            <div class="col-md-12 text-center">
+              <%= f.submit 'Gerar QR Code', class: 'btn btn-primary', data: { disable_with: 'Enviando...' } %>
+            </div>
+          </div>
+        <% end %>
       </div>
     </div>
   </div>

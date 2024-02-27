@@ -15,7 +15,7 @@ class MercadopagoService
     custom_request_options = Mercadopago::RequestOptions.new(custom_headers: custom_headers)
 
     payment_request = {
-      transaction_amount: params['amount'],
+      transaction_amount: params['amount'].to_f,
       description: params['description'],
       payment_method_id: 'pix',
       payer: {
@@ -27,7 +27,8 @@ class MercadopagoService
       }
     }
 
-    payment_response = sdk.payment.create(payment_request, custom_request_options)
+    payment_response = sdk.payment.create(payment_request, request_options: custom_request_options)
+    puts payment_response[:response]
     payment = payment_response[:response]
   end
 end

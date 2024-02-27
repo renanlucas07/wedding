@@ -88,6 +88,7 @@ GEM
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
+    domain_name (0.6.20240107)
     erubi (1.9.0)
     execjs (2.7.0)
     ffi (1.12.2)
@@ -99,6 +100,9 @@ GEM
     has_scope (0.7.2)
       actionpack (>= 4.1)
       activesupport (>= 4.1)
+    http-accept (1.7.0)
+    http-cookie (1.0.5)
+      domain_name (~> 0.5)
     i18n (1.8.2)
       concurrent-ruby (~> 1.0)
     inherited_resources (1.11.0)
@@ -140,6 +144,9 @@ GEM
     mercadopago-sdk (2.0.1)
       json
     method_source (1.0.0)
+    mime-types (3.5.2)
+      mime-types-data (~> 3.2015)
+    mime-types-data (3.2024.0206)
     mimemagic (0.3.10)
       nokogiri (~> 1)
       rake
@@ -147,6 +154,7 @@ GEM
     mini_portile2 (2.8.0)
     minitest (5.14.1)
     multi_json (1.13.1)
+    netrc (0.11.0)
     nio4r (2.5.8)
     nokogiri (1.13.4)
       mini_portile2 (~> 2.8.0)
@@ -208,6 +216,11 @@ GEM
     responders (3.0.1)
       actionpack (>= 5.0)
       railties (>= 5.0)
+    rest-client (2.1.0)
+      http-accept (>= 1.7.0, < 2.0)
+      http-cookie (>= 1.0.2, < 2.0)
+      mime-types (>= 1.16, < 4.0)
+      netrc (~> 0.8)
     rexml (3.2.5)
     rubocop (0.84.0)
       parallel (~> 1.10)
@@ -300,6 +313,7 @@ DEPENDENCIES
   rack-canonical-host
   rails (~> 5.2.4.3)
   recaptcha
+  rest-client
   rubocop
   sass-rails (~> 5.0)
   scenic
@@ -311,3 +325,6 @@ DEPENDENCIES
 
 RUBY VERSION
    ruby 2.7.1p83
+
+BUNDLED WITH
+   2.1.4

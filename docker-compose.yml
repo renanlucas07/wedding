@@ -12,6 +12,8 @@ services:
 
   web:
     build: .
+    volumes:
+      - bundle_path:/bundle
     ports:
       - '3000:3000'
       - '8025:8025'
@@ -21,3 +23,4 @@ services:
 
 volumes:
   pg_data: {}
+  bundle_path:

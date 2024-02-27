@@ -31,6 +31,7 @@ gem 'bootstrap'
 gem 'jquery-rails'
 gem 'rack-canonical-host'
 gem 'recaptcha', require: 'recaptcha/rails'
+gem 'rest-client'
 gem 'scenic'
 
 group :development, :test do

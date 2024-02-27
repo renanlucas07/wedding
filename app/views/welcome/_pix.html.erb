@@ -1,0 +1,8 @@
+<div class="row">
+  <a href=<%= ticket_url %> target="_blank">Pagar com Pix</a>
+  <br/>
+  <img src='<%= "data:image/jpeg;base64,#{qr_code_base64}"%>' width="200" height="200" />
+  <br/>
+  <label for="copiar">Código copia e cola:</label>
+  <input type="text" id="copiar" value=<%= qr_code %> readonly/>
+</div>

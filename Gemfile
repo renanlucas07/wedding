@@ -33,7 +33,8 @@ gem 'rack-canonical-host'
 gem 'recaptcha', require: 'recaptcha/rails'
 gem 'rest-client'
 gem 'scenic'
-
+gem 'pry', '~> 0.13.0'
+gem 'json', '2.5'
 group :development, :test do
   gem 'rubocop'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -52,4 +53,4 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
-gem "mercadopago-sdk", "~> 2.0"
+gem "mercadopago-sdk", "2.2.1"

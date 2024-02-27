@@ -20,6 +20,8 @@ services:
       - '1025:1025'
     links:
       - db
+    tty: true
+    stdin_open: true
 
 volumes:
   pg_data: {}

@@ -1,0 +1,10 @@
+<% if @error %>
+  $('#error').remove();
+  $('<small id="error"><br/>Preencha os campos obrigatórios!</small>').insertAfter('#submit-form');
+<% elsif @api_error %>
+  $('#error').remove();
+  $('<small id="error"><br/>Erro no servidor, tente novamente mais tarde</small>').insertAfter('#submit-form');
+<% else %>
+  $('#error').remove();
+  $('#welcome-index-venue').empty().append("<%= escape_javascript(render 'pix', qr_code: @qr_code, qr_code_base64: @qr_code_base64, ticket_url: @ticket_url) %>")
+<% end %>

@@ -26,10 +26,10 @@ class Guest < ApplicationRecord
 
   # Don't allow long or odd names in emails; may be spam.
   def email_safe_salutation
-    return 'Hello,' if
+    return 'Olá,' if
       first_name.blank? || first_name !~ /\A[\p{Word}\s'-]{1,30}\z/i
 
-    "Dear #{first_name},"
+    "Caro(a) #{first_name},"
   end
 
   validates :diet, length: { maximum: 8192 }

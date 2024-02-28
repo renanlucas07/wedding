@@ -1,6 +1,6 @@
 <p><%= @guest.email_safe_salutation %></p>
 
-<p>Recentemente você enviou seu email na confirmação de presença em <%= ENV['CANONICAL_HOST'] %>.</p>
+<p>Recentemente você enviou seu email na confirmação de presença em <%= link_to ENV['CANONICAL_HOST'], root_url %>.</p>
 
 <p>Se você quiser ver ou atualizar sua confirmação de presença, clique no link abaixo:</p>
 <p><%= link_to guest_url(@guest), guest_url(@guest) %></p>

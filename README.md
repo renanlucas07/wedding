@@ -23,9 +23,6 @@ This is a simple rails app for distributing wedding information and managing the
 
 ## Contents
 
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-
 **Table of Contents** _generated with [DocToc](https://github.com/thlorenz/doctoc)_
 
 - [Rails App for Weddings and Similar Events](#rails-app-for-weddings-and-similar-events)

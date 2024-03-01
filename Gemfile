@@ -35,6 +35,7 @@ gem 'rest-client'
 gem 'scenic'
 gem 'pry', '~> 0.13.0'
 gem 'json', '2.5'
+gem 'jquery-inputmask-rails'
 group :development, :test do
   gem 'rubocop'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

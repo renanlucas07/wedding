@@ -2,7 +2,7 @@
 
 class WelcomeController < ApplicationController
   def index
-    @google_maps_url = 'https://goo.gl/maps/nBAxNAsmPSS2'
+    @google_maps_url = 'https://maps.app.goo.gl/UZTW22MfQMZWa6mQ6'
   end
 
   def process_payment

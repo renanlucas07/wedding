@@ -34,6 +34,7 @@
   background: linear-gradient(rgba(28, 13, 10, 0.4), rgba(28, 13, 10, 0.6)),
     image-url("venue.jpg") center center no-repeat;
   background-size: cover;
+  height: 500px;
   margin-top: 5 * $spacer;
 
   * {
@@ -54,6 +55,7 @@
 
   p {
     text-align: justify;
+    font-size: large;
   }
 }
 

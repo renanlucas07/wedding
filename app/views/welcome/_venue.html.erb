@@ -5,6 +5,17 @@
 </section>
 <section id="welcome-index-venue">
   <div class="container">
+  <div> 
+    <p><strong>
+     Queridos amigos e familiares,</strong> <br>
+      Estamos emocionados em compartilhar com vocês o momento mais especial de nossas vidas: o nosso casamento!
+      Como muitos de vocês sabem, estamos embarcando nesta jornada de amor e compromisso, e estamos ansiosos para celebrar este dia único e significativo ao lado de pessoas tão queridas como vocês. <br>
+      Diante deste momento tão especial, gostaríamos de compartilhar nossa lista de presentes de casamento de uma maneira moderna e conveniente. 
+      <strong>Optamos por oferecer a opção de presentes via PIX logo abaixo,</strong>
+      proporcionando uma forma prática e segura para vocês nos presentearem.
+    </p>
+    <hr>
+  </div>
     <div class="row">
       <div class="offset-lg-2 col-lg-8">
         <%= form_with url: process_payment_path, method: :post, id: 'form-checkout' do |f| %>
@@ -13,7 +24,7 @@
               <%= f.label :payment_first_name, 'Nome', class: 'col-form-label' %>
             </div>
             <div class="col-md-9">
-              <%= f.text_field :payment_first_name, id: "form-checkout__payerFirstName", class: 'form-control' %>
+              <%= f.text_field :payment_first_name, id: "form-checkout__payerFirstName", class: 'form-control', placeholder:'Digite seu nome' %>
             </div>
           </div>
           <div class="form-group row">
@@ -21,7 +32,7 @@
               <%= f.label :payment_last_name, 'Sobrenome', class: 'col-form-label' %>
             </div>
             <div class="col-md-9">
-              <%= f.text_field :payment_last_name, id: "form-checkout__payerLastName", class: 'form-control' %>
+              <%= f.text_field :payment_last_name, id: "form-checkout__payerLastName", class: 'form-control', placeholder:'Digite seu sobrenome' %>
             </div>
           </div>
           <div class="form-group row">
@@ -30,19 +41,18 @@
               <span class="wedding-required">*</span>
             </div>
             <div class="col-md-9">
-              <%= f.email_field :email, id: "form-checkout__email", class: 'form-control' %>
+              <%= f.email_field :email, id: "form-checkout__email", class: 'form-control',  placeholder:'Digite seu email' %>
             </div>
           </div>
           <div class="form-group row">
             <div class="col-md-3">
-              <%= f.label :identification_type, 'Documento', class: 'col-form-label' %>
+              <%= f.label :identification_type, 'CPF', class: 'col-form-label' %>
               <span class="wedding-required">*</span>
             </div>
-            <div class="col-md-2">
-              <%= f.select :identification_type, [], {}, {class: 'form-control', id: 'form-checkout__identificationType'} %>
-            </div>
-            <div class="col-md-7">
-              <%= f.text_field :identification_number, id: "form-checkout__identificationNumber", class: 'form-control' %>
+              <%= f.hidden_field :identification_type, value: 'CPF' %>
+            
+            <div class="col-md-9">
+              <%= f.text_field :identification_number, id: "form-checkout__identificationNumber", class: 'form-control', placeholder: 'Digite seu CPF' %>
             </div>
           </div>
           <div class="form-group row">
@@ -51,7 +61,7 @@
               <span class="wedding-required">*</span>
             </div>
             <div class="col-md-9">
-              <%= f.text_field :amount, id: "form-checkout__amount", class: 'form-control' %>
+              <%= f.text_field :amount, id: "form-checkout__amount", class: 'form-control', placeholder:'Digite o valor' %>
             </div>
           </div>
           <div class="form-group row">

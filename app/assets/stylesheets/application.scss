@@ -34,7 +34,7 @@ $enable-rounded: false;
 @import "welcome";
 
 h1 {
-  font-size: 60px;
+  font-size: 50px;
   font-weight: 700;
   letter-spacing: 0.0833333em;
   text-transform: uppercase;
@@ -62,4 +62,18 @@ h2 {
 
 .wedding-required {
   color: theme-color("primary");
+}
+
+body {
+  position: absolute;
+}
+
+@media (max-width: 500px) {
+  .container {
+    max-width: 100vw !important;
+  }
+
+  body {
+    overflow-x: hidden !important;
+  }
 }

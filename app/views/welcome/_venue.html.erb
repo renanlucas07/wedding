@@ -59,7 +59,7 @@
               <span class="wedding-required">*</span>
             </div>
             <div class="col-md-9">
-              <%= f.text_field :amount, id: "form-checkout__amount", class: 'form-control', placeholder:'Digite o valor' %>
+              <%= select_tag :amount, options_for_select([['R$ 150,00', 150], ['R$ 200,00', 200], ['R$ 250,00', 250], ['R$ 300,00', 300], ['R$ 500,00', 500], ['R$ 1.000,00', 1000]]), {id: "form-checkout__amount", class: 'form-control', placeholder:'Digite o valor'} %>
             </div>
           </div>
           <div class="form-group row">
